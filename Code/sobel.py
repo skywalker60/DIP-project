@@ -2,13 +2,13 @@
 import cv2
 import numpy as np
 import math
-from numba import guvectorize,jit,cuda
+
 
 #  Read Input Image 
 input_image = cv2.imread('file-20181107-74757-1nzaxpf.jpg') 
 input_image = np.uint8(input_image)
  
-@guvectorize([(' float64[:,:]')], '()')
+
 def sobelmain(input_image):
 #  Convert the truecolor RGB image to the grayscale image 
 
